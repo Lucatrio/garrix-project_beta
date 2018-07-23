@@ -4,6 +4,6 @@ const commands = require('./commands.js');
 
 client.on("ready", async () => {
   console.log(`${client.user.tag} logged in ${client.guilds.size} guilds`)
-  client.user.setActivity('the queue', { type: 'WATCHING' })
+  client.user.setActivity(url: 'https://www.twitch.tv/monstercat', { type: 'STREAMING' })
 }); 
 client.login(process.env.TOKEN);
