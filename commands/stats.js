@@ -3,12 +3,18 @@ const moment = require("moment");
 const momentduration = require("moment-duration-format");
 
 module.exports.run = async (client, message, args) => {
-    	let totalSeconds = (client.uptime / 1000);
-	let hours = Math.floor(totalSeconds / 3600);
-	totalSeconds %= 3600;
-	let minutes = Math.floor(totalSeconds / 60);
-	let seconds = totalSeconds % 60;
-	let uptime = `${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+function uptime() {
+  let msg = 'Uptime: ';
+  const totalSeconds = process.uptime();
+  const days = Math.floor((totalSeconds % 31536000) / 86400);
+  const hours = _.parseInt(totalSeconds / 3600) % 24;
+  const minutes = _.parseInt(totalSeconds / 60) % 60;
+  const seconds = Math.floor(totalSeconds % 60);
+  message += days >= 1 ? `${days}d ` : '';
+  message += hours < 10 ? `0${hours}:` : `${hours}:`;
+  message += minutes < 10 ? `0${minutes}:` : `${minutes}:`;
+  message += seconds < 10 ? `0${seconds}` : `${seconds}`;
+}
     let embed = new Discord.RichEmbed()
     .setColor("RED")
     .setTitle('> General <')
