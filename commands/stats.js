@@ -10,10 +10,10 @@ function uptime() {
   const hours = _.parseInt(totalSeconds / 3600) % 24;
   const minutes = _.parseInt(totalSeconds / 60) % 60;
   const seconds = Math.floor(totalSeconds % 60);
-  message += days >= 1 ? `${days}d ` : '';
+  msg += days >= 1 ? `${days}d ` : '';
   message += hours < 10 ? `0${hours}:` : `${hours}:`;
-  message += minutes < 10 ? `0${minutes}:` : `${minutes}:`;
-  message += seconds < 10 ? `0${seconds}` : `${seconds}`;
+  msg += minutes < 10 ? `0${minutes}:` : `${minutes}:`;
+  msg += seconds < 10 ? `0${seconds}` : `${seconds}`;
 }
     let embed = new Discord.RichEmbed()
     .setColor("RED")
@@ -21,7 +21,7 @@ function uptime() {
     .addField(`Guilds `, client.guilds.size)
     .addField(`Users `, client.users.size)
     .addField(`Channels `, client.channels.size)
-    .addField(`Uptime `, uptime);
+    .addField(`Uptime `, uptime.message);
 
 message.channel.send(embed);
 }
