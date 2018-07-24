@@ -20,6 +20,7 @@ client.on("message", message => {
     const command = args.shift().toLowerCase();
     try {
       let commandFile = require(`./commands/${command}.js`);
+      console.log(`${command} loaded`);
       commandFile.run(client, message, args);
     } catch (err) {
       message.channel.send(`${message.author.toString()}, sorry that is not a command`);
