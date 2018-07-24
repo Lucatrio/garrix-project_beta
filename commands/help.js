@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
 module.exports.run = async (client, message, args) => {
+     let prefix = "g."
     let sembed = new Discord.RichEmbed()
     .setColor("RED")
     .setTitle(`Server commands`)
