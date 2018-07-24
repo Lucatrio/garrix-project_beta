@@ -22,7 +22,7 @@ client.on("message", message => {
       let commandFile = require(`./commands/${command}.js`);
       commandFile.run(client, message, args);
     } catch (err) {
-      console.log("I'm not familiar with that command :thinking:")
+      message.channel.send(`${message.author.toString()}, sorry that is not a command`);
     }
   });
   
