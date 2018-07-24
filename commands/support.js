@@ -1,4 +1,4 @@
-const discord = require("discord.js")
+const Discord = require("discord.js")
 module.exports.run = async (client, message, args) => {
     let discordlink = '[here](https://discord.gg/XWMf7P)'
     let embed = new Discord.RichEmbed()
