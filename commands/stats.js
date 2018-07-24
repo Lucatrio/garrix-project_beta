@@ -11,7 +11,7 @@ function uptime() {
   const minutes = _.parseInt(totalSeconds / 60) % 60;
   const seconds = Math.floor(totalSeconds % 60);
   msg += days >= 1 ? `${days}d ` : '';
-  message += hours < 10 ? `0${hours}:` : `${hours}:`;
+  msg += hours < 10 ? `0${hours}:` : `${hours}:`;
   msg += minutes < 10 ? `0${minutes}:` : `${minutes}:`;
   msg += seconds < 10 ? `0${seconds}` : `${seconds}`;
 }
@@ -21,7 +21,7 @@ function uptime() {
     .addField(`Guilds `, client.guilds.size)
     .addField(`Users `, client.users.size)
     .addField(`Channels `, client.channels.size)
-    .addField(`Uptime `, uptime.message);
+    .addField(`Uptime `, uptime.msg);
 
 message.channel.send(embed);
 }
