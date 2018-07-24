@@ -15,7 +15,7 @@ client.on("message", message => {
       let commandFile = require(`./commands/${command}.js`);
       commandFile.run(client, message, args);
     } catch (err) {
-      message.reply("I'm not familiar with that command :thinking:")
+      console.log("I'm not familiar with that command :thinking:")
     }
   });
   
