@@ -6,7 +6,7 @@ client.on("ready", ready => {
     console.log("Ready..")
 });
 client.on("message", message => {
-    let prefix = "g."
+    let prefix = "g.";
     if (message.author.bot) return;
     if(message.content.indexOf(prefix) !== 0) return;
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
