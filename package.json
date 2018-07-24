@@ -2,9 +2,9 @@
   "name": "lister_bot",
   "version": "0.0.1",
   "description": "",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
   "author": "lucatrio and thetechguy61705 and nightmare",
   "license": "ISC",
