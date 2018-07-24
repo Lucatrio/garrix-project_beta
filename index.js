@@ -4,6 +4,13 @@ const moment = require('moment');
 const momentduration = require('moment-duration-format');
 client.on("ready", ready => {
     console.log("Ready..")
+        bot.user.setPresence({
+        game: {
+            name: 'tutorials',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
 });
 client.on("message", message => {
     let prefix = "g.";
