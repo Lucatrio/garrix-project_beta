@@ -23,7 +23,7 @@ client.on("message", message => {
       console.log(`${command} loaded`);
       commandFile.run(client, message, args);
     } catch (err) {
-      message.channel.send(`${message.author.toString()}, sorry that is not a command`);
+      message.reply(":thinking: Sorry, That's not a valid command")
     }
   });
   
