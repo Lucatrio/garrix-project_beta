@@ -6,8 +6,8 @@ client.on("ready", ready => {
     console.log("Ready..")
         client.user.setPresence({
         game: {
-            name: 'tutorials',
-            type: "STREAMING",
+            name: 'the queue',
+            type: "WATCHING",
             url: "https://www.twitch.tv/monstercat"
         }
     });
