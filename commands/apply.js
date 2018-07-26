@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
-   
+   if(message.channel.type != 'dm') return;
       try {
         if (!args[0]) message.author.send(`Invalid usage do ${prefix}apply <client id>`);
             if (args[0]) message.author.send(`Thank you for applying your application will be reviewed as soon as possible\nIf you put something else then a client id you will be punished`);
